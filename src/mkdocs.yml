@@ -1,4 +1,5 @@
 site_name: IS/IT Strategy Documentation
+site_url: https://marianojgnlz.github.io/source_of_truth/
 theme:
   name: material
   # If you have features or palette, they would be here
