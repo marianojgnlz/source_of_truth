@@ -2,6 +2,8 @@ site_name: IS/IT Strategy Documentation
 site_url: https://marianojgnlz.github.io/source_of_truth/
 theme:
   name: material
+  palette:
+    accent: indigo
   # If you have features or palette, they would be here
 
 docs_dir: ../unidad_1 # Points to your 'unidad_1' directory relative to this mkdocs.yml
@@ -40,13 +42,6 @@ nav:
     - '12c. Strategy Formulation': '12c_Formulacion_Estrategia_SI_TI.md'
     - '12d. Strategy Implementation': '12d_Implantacion_Estrategia_SI_TI.md'
     - '12e. Strategy Monitoring & Control': '12e_Seguimiento_Control_Estrategia_SI_TI.md'
-  - '13. IS/IT Project Management': '13_Gestion_Proyectos_SI_TI.md'
-  - '14. Software and IS Quality': '14_Calidad_Software_SI.md'
-  - '15. IS/IT Outsourcing': '15_Outsourcing_SI_TI.md'
-  - '16. IS/IT Security': '16_Seguridad_SI_TI.md'
-  - '17. Legal and Ethical Aspects in IS/IT': '17_Aspectos_Legales_Eticos_SI_TI.md'
-  - '18. Future Trends in IS/IT': '18_Tendencias_Futuras_SI_TI.md'
-  - '19. Glossary of IS/IT Terms': '19_Glosario_Terminos_SI_TI.md'
 
 markdown_extensions:
   - pymdownx.superfences:
@@ -64,3 +59,6 @@ markdown_extensions:
 plugins:
   - search
   # - mermaid2 # If using mkdocs-mermaid2-plugin (ensure it's installed)
+
+extra_css:
+  - stylesheets/extra.css # Adjust path if needed
