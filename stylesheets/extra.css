@@ -1,0 +1,9 @@
+:root > * { /* Or simply :root for newer versions */
+  --md-primary-fg-color:        #123456; /* Your custom color */
+  --md-primary-fg-color--light: #abcdef; /* A lighter variant */
+  --md-primary-fg-color--dark:  #000000; /* A darker variant */
+}
+
+#node-0 {
+  fill: var(--md-primary-fg-color--light)!important;
+}

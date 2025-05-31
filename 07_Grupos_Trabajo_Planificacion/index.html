@@ -28,6 +28,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -45,6 +48,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -55,7 +60,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -107,8 +117,8 @@
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -1105,160 +1115,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../13_Gestion_Proyectos_SI_TI.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    13. IS/IT Project Management
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../14_Calidad_Software_SI.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    14. Software and IS Quality
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../15_Outsourcing_SI_TI.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    15. IS/IT Outsourcing
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../16_Seguridad_SI_TI.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    16. IS/IT Security
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../17_Aspectos_Legales_Eticos_SI_TI.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    17. Legal and Ethical Aspects in IS/IT
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../18_Tendencias_Futuras_SI_TI.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    18. Future Trends in IS/IT
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../19_Glosario_Terminos_SI_TI/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    19. Glossary of IS/IT Terms
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1341,21 +1197,21 @@
 <p>Este documento describe la composición y funciones de los diferentes grupos de trabajo involucrados en el procedimiento de planificación de Sistemas y Tecnologías de Información (SI/TI).</p>
 <pre class="mermaid"><code>mindmap
   root("Grupos de Trabajo en Planificación SI/TI")
-    ("Introducción" ~colon~ "Colaboración de varios grupos con roles específicos")
+    ("Introducción: Colaboración de varios grupos con roles específicos")
     ("1. Comité de Tecnologías y Sistemas de Información (Comité SI/TI)")
-      ("Definición" ~colon~ "Órgano con RESPONSABILIDAD ÚLTIMA sobre SI diseñado")
+      ("Definición: Órgano con RESPONSABILIDAD ÚLTIMA sobre SI diseñado")
       ("Integrantes")
         ("Máximo responsable compañía (CEO/Dir. General)")
         ("Responsables áreas funcionales (Gerentes)")
         ("Director de SI (CIO)")
-        ("Nota" ~colon~ "Alta dirección, gerentes, nivel táctico (incluye gerente sistemas)")
+        ("Nota: Alta dirección, gerentes, nivel táctico (incluye gerente sistemas)")
       ("Funciones/Responsabilidades")
         ("Supervisión proyecto planificación")
         ("Explicitar compromiso organizacional con Plan")
         ("Proporcionar criterios estratégicos (prioridades, recursos)")
         ("APROBAR Plan de SI/TI")
     ("2. Equipo de Trabajo")
-      ("Definición" ~colon~ "Realiza TRABAJO OPERATIVO para elaborar Plan TI/SI")
+      ("Definición: Realiza TRABAJO OPERATIVO para elaborar Plan TI/SI")
       ("Integrantes")
         ("Dirigido por Director de SI")
         ("Personal de Sistemas")
@@ -1363,18 +1219,18 @@
       ("Funciones/Responsabilidades")
         ("Ejecutar el plan (tareas para elaborar Plan SI/TI)")
     ("3. Grupo Base")
-      ("Definición" ~colon~ "STAFF DE EXPERTOS para definir planes y estrategias")
+      ("Definición: STAFF DE EXPERTOS para definir planes y estrategias")
       ("Integrantes")
         ("Subdirector general a cargo de SI (si existe)")
         ("Director de SI")
         ("Director Operativo del Proyecto (DOP)")
         ("Consultores externos (eventualmente)")
-        ("Nota" ~colon~ "Niveles gerenciales de sistemas, expertos externos")
+        ("Nota: Niveles gerenciales de sistemas, expertos externos")
       ("Funciones/Responsabilidades")
         ("Facilitar negociación entre usuarios")
         ("Asegurar consistencia de desarrollos")
         ("Supervisar equipo de trabajo")
-    ("Resumen de Grupos" ~colon~ "Tabla con Integrantes Clave y Funciones Principales")</code></pre>
+    ("Resumen de Grupos: Tabla con Integrantes Clave y Funciones Principales")</code></pre>
 <p><a href="../00_Indice_SI_TI/">&lt; Volver al Índice Principal</a> | <a href="../06_Planificacion_SI_TI_Desde_Estrategia_Negocio/">Anterior: 6. Planificación de SI/TI a partir de la Estrategia de Negocio</a></p>
 <p>El procedimiento de planificación de SI/TI requiere la colaboración de varios grupos de trabajo con roles y responsabilidades específicas:</p>
 <h2 id="1-comite-de-tecnologias-y-sistemas-de-informacion-comite-de-siti">1. Comité de Tecnologías y Sistemas de Información (Comité de SI/TI)<a class="headerlink" href="#1-comite-de-tecnologias-y-sistemas-de-informacion-comite-de-siti" title="Permanent link">&para;</a></h2>
