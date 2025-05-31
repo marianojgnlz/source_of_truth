@@ -3,9 +3,6 @@ theme:
   name: material
   # If you have features or palette, they would be here
 
-extra_css:
-  - stylesheets/custom_mermaid.css
-
 docs_dir: ../unidad_1 # Points to your 'unidad_1' directory relative to this mkdocs.yml
 
 nav:
