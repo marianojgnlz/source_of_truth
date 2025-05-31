@@ -1,0 +1,34 @@
+/* src/stylesheets/custom_mermaid.css */
+
+/* For default (light) theme */
+[data-md-color-scheme="default"] {
+  --md-mermaid-fg-color: #000000; /* Black for text and lines */
+  --md-mermaid-bg-color: #ffffff; /* White for background fills */
+}
+
+/* For slate (dark) theme - ensuring high contrast */
+[data-md-color-scheme="slate"] {
+  --md-mermaid-fg-color: #ffffff; /* White for text and lines */
+  --md-mermaid-bg-color: #000000; /* Black for background fills */
+}
+
+/* More specific overrides if the above are not enough */
+.mermaid svg {
+  font-family: var(--md-code-font-family); /* Ensure consistent font */
+}
+
+/* For mindmap text and lines specifically if needed */
+.mermaid .mindmap-node text,
+.mermaid .mindmap-edge path {
+  stroke: var(--md-mermaid-fg-color) !important; /* Line color */
+  fill: var(--md-mermaid-fg-color) !important;   /* Text color */
+}
+
+/* If you want to force node backgrounds to be transparent in mindmaps */
+.mermaid .mindmap-node rect,
+.mermaid .mindmap-node circle,
+.mermaid .mindmap-node ellipse,
+.mermaid .mindmap-node polygon {
+    fill: var(--md-mermaid-bg-color) !important;
+    stroke: var(--md-mermaid-fg-color) !important;
+} 

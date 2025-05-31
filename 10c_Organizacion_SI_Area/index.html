@@ -1,0 +1,1528 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../10b_Ubicacion_SI_Area/">
+      
+      
+        <link rel="next" href="../11_Administracion_SI/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Organization of the IS Area - IS/IT Strategy Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom_mermaid.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#103-organizacion-del-area-de-si" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="IS/IT Strategy Documentation" class="md-header__button md-logo" aria-label="IS/IT Strategy Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IS/IT Strategy Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Organization of the IS Area
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IS/IT Strategy Documentation" class="md-nav__button md-logo" aria-label="IS/IT Strategy Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IS/IT Strategy Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00_Indice_SI_TI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_Introduccion_Administracion_Estrategia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introduction to Administration and Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_Sistema_Informacion_Empresa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. The Information System in the Company
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_SI_Cadena_Valor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. IS and the Value Chain
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_SI_Otros_Sistemas_Empresa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    4. IS and Other Company Systems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05_Rol_Tecnologias_Informacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    5. The Role of IT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06_Planificacion_SI_TI_Desde_Estrategia_Negocio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    6. IS/IT Planning from Business Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_Grupos_Trabajo_Planificacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    7. Working Groups in Planning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    8. Phases of IS/IT Alignment Plan
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            8. Phases of IS/IT Alignment Plan
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_Fases_Plan_Alineamiento/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08a_Fase_I_Presentacion_Compromiso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phase I: Presentation and Commitment
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08b_Fase_II_Descripcion_Situacion_Actual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phase II: Description of Current Situation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08c_Fase_III_Elaboracion_Plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phase III: Plan Elaboration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08d_Fase_IV_Programacion_Actividades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Phase IV: Activity Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    9. Value of Information and IS Investment
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            9. Value of Information and IS Investment
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09_Valor_Informacion_Inversion_SI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09a_Costos_SI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Costs of IS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09b_Beneficios_SI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Benefits of IS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09c_Tipos_Inversiones_SI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Types of IS Investments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    10. IS Resource Management (IS Area)
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            10. IS Resource Management (IS Area)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10_Management_Recursos_IS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10a_Rol_SI_Area/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role of the IS Area
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10b_Ubicacion_SI_Area/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Location of the IS Area
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Organization of the IS Area
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Organization of the IS Area
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-enfoque-tradicional-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Enfoque Tradicional (Centro de Datos)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-estructura-de-base-de-datos-bd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Estructura de Base de Datos (BD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-grupos-de-proyectos-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Grupos de Proyectos Funcionales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-centro-de-informacion-y-apoyo-a-decisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Centro de Información y Apoyo a Decisiones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-estructuras-externas-orientadas-al-clienteservicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Estructuras Externas (Orientadas al Cliente/Servicio)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tendencia-general-de-las-nuevas-estructuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tendencia General de las Nuevas Estructuras
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11_Administracion_SI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    11. IS Administration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    12. Integration of IS and Business Strategy
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            12. Integration of IS and Business Strategy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12_Integracion_SI_Estrategia_Empresarial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12a_Contexto_Estrategia_SI_TI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12a. Context of IS/IT Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12b_Inputs_Clave_Estrategia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12b. Key Inputs for Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12c_Cartera_Aplicaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12c. Application Portfolio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12c_Formulacion_Estrategia_SI_TI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12c. Strategy Formulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12d_Implantacion_Estrategia_SI_TI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12d. Strategy Implementation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12e_Seguimiento_Control_Estrategia_SI_TI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    12e. Strategy Monitoring & Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13_Gestion_Proyectos_SI_TI.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    13. IS/IT Project Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14_Calidad_Software_SI.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    14. Software and IS Quality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15_Outsourcing_SI_TI.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    15. IS/IT Outsourcing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16_Seguridad_SI_TI.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    16. IS/IT Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17_Aspectos_Legales_Eticos_SI_TI.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    17. Legal and Ethical Aspects in IS/IT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18_Tendencias_Futuras_SI_TI.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    18. Future Trends in IS/IT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19_Glosario_Terminos_SI_TI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    19. Glossary of IS/IT Terms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-enfoque-tradicional-centro-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Enfoque Tradicional (Centro de Datos)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-estructura-de-base-de-datos-bd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Estructura de Base de Datos (BD)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-grupos-de-proyectos-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Grupos de Proyectos Funcionales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-centro-de-informacion-y-apoyo-a-decisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Centro de Información y Apoyo a Decisiones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-estructuras-externas-orientadas-al-clienteservicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Estructuras Externas (Orientadas al Cliente/Servicio)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tendencia-general-de-las-nuevas-estructuras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tendencia General de las Nuevas Estructuras
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="103-organizacion-del-area-de-si">10.3. Organización del Área de SI<a class="headerlink" href="#103-organizacion-del-area-de-si" title="Permanent link">&para;</a></h1>
+<p>Este documento describe la estructura interna del Área de Sistemas de Información (SI), los diferentes enfoques organizacionales que han evolucionado con el tiempo, y cómo estos pueden coexistir. La elección de la estructura debe alinearse con la estrategia para los SI.</p>
+<pre class="mermaid"><code>mindmap
+  root("Organización del Área de SI")
+    ("Introducción" ~colon~ "Estructura interna del Área SI, varios enfoques coexisten")
+    ("1. Enfoque Tradicional (Centro de Datos)")
+      ("Estructura" ~colon~ "DPD rígido, desarrollo/mantenimiento/operación separados")
+      ("Contexto" ~colon~ "Era desarrollos internos, función financiera, poco management senior en IT")
+      ("Desventajas" ~colon~ "Retraso, sistemas proscriptos/inflexibles, mantenimiento costoso, burocracia")
+      ("Vigencia" ~colon~ "Para complejidad técnica, gran volumen datos")
+    ("2. Estructura de Base de Datos (BD)")
+      ("Estructura" ~colon~ "Organiza por necesidades almacenamiento datos")
+      ("Concepto Clave" ~colon~ "Datos separados de aplicaciones, reagrupados para análisis/diseño/desarrollo")
+      ("Ventaja" ~colon~ "Facilita acceso usuario a datos (control DBA), usuarios desarrollan conciencia SI")
+    ("3. Grupos de Proyectos Funcionales")
+      ("Estructura" ~colon~ "Analistas/programadores en grupos por áreas funcionales")
+      ("Relevancia" ~colon~ "Primer reconocimiento objetivo SI en negocio (demanda vs. oferta)")
+      ("Operaciones" ~colon~ "Tradicional (Centro de Datos)")
+      ("Management" ~colon~ "Matriz (dificultades: doble reporte, prioridades)")
+      ("Beneficios" ~colon~ "Sistemas más relevantes, mayor involucramiento usuario, personal SI más consciente negocio")
+      ("Desventajas" ~colon~ "Posibles 'murallas chinas' entre áreas SI")
+    ("4. Centro de Información y Apoyo a Decisiones")
+      ("Estructura" ~colon~ "Orientada a apoyo toma decisiones, ligada a Centros de Información")
+      ("Función Principal" ~colon~ "Apoyar decisiones management usuarios")
+      ("Evolución Responsabilidad SI" ~colon~ "De procesamiento datos a manejo efectivo SI")
+    ("5. Estructuras Externas (Orientadas al Cliente/Servicio)")
+      ("Estructura" ~colon~ "Centrada en ambiente (organización usuaria)")
+        ("Función estructurada por líneas servicio consumidor")
+        ("Grupos SI alcanzan SLAs con comunidad usuarios")
+    ("Tendencia General Nuevas Estructuras")
+      ("Transferencia de autonomía para" ~colon~ "Menores ciclos desarrollo, sistemas flexibles/menos prescriptivos, apoyo eficiente management")
+      ("Solucionar inconvenientes tradicionales" ~colon~ "Distribuyendo aspectos sistema y responsabilidades")
+      ("Conclusión" ~colon~ "Área SI ya no es homogénea")</code></pre>
+<p><a href="../10_Management_Recursos_IS/">&lt; Volver a Management de Recursos de IS</a> | <a href="../00_Indice_SI_TI/">&lt; Volver al Índice Principal</a></p>
+<p>La organización del Área de SI se refiere a la estructura interna de dicho departamento, independientemente de su <a href="../10b_Ubicacion_SI_Area/">ubicación física o de control</a>. Existen diferentes enfoques que han evolucionado, y es común que varios coexistan dentro de una empresa para maximizar ventajas y minimizar desventajas.</p>
+<h2 id="1-enfoque-tradicional-centro-de-datos">1. Enfoque Tradicional (Centro de Datos)<a class="headerlink" href="#1-enfoque-tradicional-centro-de-datos" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Estructura</strong>: Departamento de procesamiento de datos (DPD) o sección de informática con una estructura rígida. Las funciones de desarrollo de aplicaciones, mantenimiento y operación de sistemas están separadas.<ul>
+<li><strong>Personal de Operación</strong>: Trabaja por turnos para maximizar el uso de recursos costosos; incluye programadores de sistemas.</li>
+<li><strong>Sección de Desarrollo</strong>: Originalmente analistas de sistemas. El análisis y diseño eran actividades separadas, generando problemas de comunicación.</li>
+</ul>
+</li>
+<li><strong>Contexto</strong>: Asociado a la era de desarrollos internos, requería muchos programadores. Estructura interna frecuentemente determinada por una función financiera. Poco probable que el management senior tuviera responsabilidad específica por la informática.</li>
+<li><strong>Funcionamiento</strong>: Correcto en la época de sistemas centralizados.</li>
+<li><strong>Desventajas (que la hicieron inadecuada para muchas circunstancias actuales)</strong>:<ul>
+<li><strong>Retraso</strong>: Nuevos desarrollos podían llevar años; modificaciones meses.</li>
+<li><strong>Sistemas proscriptos</strong>: Fuerte énfasis en aspectos técnicos llevaba a la 'elegancia' del sistema sobre la usabilidad.</li>
+<li><strong>Sistemas inflexibles</strong>.</li>
+<li><strong>Mantenimiento costoso</strong>.</li>
+<li><strong>Burocracia</strong>: Necesidad de estandarización por movimiento de proyectos entre equipos, ralentizando el desarrollo.</li>
+</ul>
+</li>
+<li><strong>Vigencia</strong>: Aún existe (denominada Centro de Datos). Adecuada para actividades con complejidad técnica, gran volumen de datos, etc.</li>
+</ul>
+<h2 id="2-estructura-de-base-de-datos-bd">2. Estructura de Base de Datos (BD)<a class="headerlink" href="#2-estructura-de-base-de-datos-bd" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Estructura</strong>: Organiza la estructura del área de SI en base a las necesidades de almacenamiento de datos.</li>
+<li><strong>Concepto Clave</strong>: Los <strong>datos se separan de las aplicaciones</strong> y se reagrupan para el análisis, diseño y desarrollo de sistemas.</li>
+<li><strong>Ventaja Principal</strong>: Facilita el acceso del usuario a los datos, bajo el control del administrador de la base (DBA).</li>
+<li><strong>Impacto en Usuarios</strong>: A medida que los usuarios se involucran (al menos al definir sus requerimientos de datos), desarrollan conciencia y habilidades en SI.</li>
+</ul>
+<h2 id="3-grupos-de-proyectos-funcionales">3. Grupos de Proyectos Funcionales<a class="headerlink" href="#3-grupos-de-proyectos-funcionales" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Estructura</strong>: Combina analistas y programadores en <strong>grupos de proyectos orientados a áreas empresariales/funcionales</strong>.</li>
+<li><strong>Relevancia</strong>: Primer reconocimiento del objetivo del área de SI dentro del negocio (estructuración por demanda, no por oferta).</li>
+<li><strong>Operaciones</strong>: Las operaciones se siguen llevando a cabo de forma 'tradicional' (Centro de Datos).</li>
+<li><strong>Tipo de Management</strong>: Forma de la <strong>matriz de management</strong>, con sus dificultades asociadas (doble reporte, prioridades conflictivas, etc.).</li>
+<li><strong>Beneficios</strong>: Estimuló el desarrollo de sistemas más relevantes e involucró más al usuario, permitiendo al personal de SI desarrollar más conciencia del negocio.</li>
+<li><strong>Desventajas</strong>: Pudo contribuir a crear 'murallas chinas' entre distintas áreas de sistemas, generando barreras al intercambio de información.</li>
+</ul>
+<h2 id="4-centro-de-informacion-y-apoyo-a-decisiones">4. Centro de Información y Apoyo a Decisiones<a class="headerlink" href="#4-centro-de-informacion-y-apoyo-a-decisiones" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Estructura</strong>: Orientadas al apoyo para la toma de decisiones, estrechamente ligadas a los <strong>Centros de Información</strong>.</li>
+<li><strong>Función Principal</strong>: Organizar la función del área de SI para servir de apoyo a las decisiones de management de los usuarios (aunque no necesariamente con esos usuarios controlando la naturaleza de los sistemas).</li>
+<li><strong>Evolución de Responsabilidad</strong>: El área de SI ya no es responsable solo del procesamiento de datos, sino también del <strong>manejo efectivo de los SI</strong>.</li>
+</ul>
+<h2 id="5-estructuras-externas-orientadas-al-clienteservicio">5. Estructuras Externas (Orientadas al Cliente/Servicio)<a class="headerlink" href="#5-estructuras-externas-orientadas-al-clienteservicio" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Estructura</strong>: Se centra en el ambiente (la organización usuaria) y se da por medio de dos aspectos:<ol>
+<li>La función se estructura en torno a <strong>líneas de servicio al consumidor</strong> para satisfacer la organización del negocio (entorno inmediato del área de SI).</li>
+<li>Los grupos de SI alcanzan <strong>acuerdos de servicio (SLAs)</strong> con la comunidad de usuarios, quienes definen tanto las obligaciones del área de SI como las percepciones de valor del negocio.</li>
+</ol>
+</li>
+</ul>
+<h2 id="tendencia-general-de-las-nuevas-estructuras">Tendencia General de las Nuevas Estructuras<a class="headerlink" href="#tendencia-general-de-las-nuevas-estructuras" title="Permanent link">&para;</a></h2>
+<p>Todas las nuevas estructuras (posteriores a la tradicional) se relacionan esencialmente con la <strong>transferencia de autonomía</strong> para obtener:
+*   Menores ciclos de desarrollo de sistemas.
+*   Sistemas más flexibles.
+*   Sistemas menos prescriptivos que sirvan de apoyo eficiente al management.</p>
+<p>Tratan de solucionar los inconvenientes de las estructuras tradicionales <strong>distribuyendo algunos aspectos del sistema y sus responsabilidades asociadas</strong> para el desarrollo, adquisición, operación, control y mantenimiento.</p>
+<blockquote>
+<p>El Área de SI ya no es un elemento homogéneo.</p>
+</blockquote>
+<hr />
+<p>Siguiente Tema: <a href="../11_Administracion_SI/">11. Administración de los SI</a> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
