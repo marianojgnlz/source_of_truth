@@ -1,0 +1,29 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Rule: Managing Unities of Knowledge
+
+This project utilizes a set of Markdown files, named `unidad_0.md`, `unidad_1.md`, `unidad_2.md`, and so on, located in the workspace root. These files represent individual "unities of knowledge" that collectively form the comprehensive source of truth for the project.
+
+## How to Use These Files:
+
+1.  **Authoritative Source:** Each `unidad_X.md` file is an authoritative source for the specific piece of information or knowledge it contains. Treat them as mini "sources of truth."
+
+2.  **Information Retrieval:** When you need information about a specific topic, first try to identify if a relevant `unidad_X.md` file exists. Query or read these files to get accurate information.
+
+3.  **Interlinked Knowledge:** These files may be interlinked. Understanding the context might require looking at multiple related `unidad_X.md` files.
+
+4.  **Updating Knowledge:**
+    *   If existing information needs to be updated or corrected, identify the relevant `unidad_X.md` file and propose changes to it.
+    *   If new knowledge needs to be added that doesn't fit an existing file, a new `unidad_X.md` file (following the naming convention, e.g., `unidad_N.md` where N is the next available number) should be created for this new unit of knowledge.
+
+5.  **Collective Truth:** Remember that these files are designed to break down a larger body of information into manageable pieces. Collectively, they represent the complete source of truth.
+
+## File Naming and Location:
+
+*   **Naming Convention:** `unidad_0.md`, `unidad_1.md`, `unidad_2.md`, ...
+*   **Location:** Workspace root (e.g., `/path/to/workspace/unidad_0.md`).
+
+By following these guidelines, you can effectively manage and utilize these unities of knowledge to maintain an accurate and well-organized information base for the project.

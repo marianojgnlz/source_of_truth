@@ -1,0 +1,68 @@
+site_name: IS/IT Strategy Documentation
+theme:
+  name: material
+  # If you have features or palette, they would be here
+
+extra_css:
+  - stylesheets/custom_mermaid.css
+
+docs_dir: ../unidad_1 # Points to your 'unidad_1' directory relative to this mkdocs.yml
+
+nav:
+  - 'Index': '00_Indice_SI_TI.md'
+  - '1. Introduction to Administration and Strategy': '01_Introduccion_Administracion_Estrategia.md'
+  - '2. The Information System in the Company': '02_Sistema_Informacion_Empresa.md'
+  - '3. IS and the Value Chain': '03_SI_Cadena_Valor.md'
+  - '4. IS and Other Company Systems': '04_SI_Otros_Sistemas_Empresa.md'
+  - '5. The Role of IT': '05_Rol_Tecnologias_Informacion.md'
+  - '6. IS/IT Planning from Business Strategy': '06_Planificacion_SI_TI_Desde_Estrategia_Negocio.md'
+  - '7. Working Groups in Planning': '07_Grupos_Trabajo_Planificacion.md'
+  - '8. Phases of IS/IT Alignment Plan':
+    - 'Overview': '08_Fases_Plan_Alineamiento.md'
+    - 'Phase I: Presentation and Commitment': '08a_Fase_I_Presentacion_Compromiso.md'
+    - 'Phase II: Description of Current Situation': '08b_Fase_II_Descripcion_Situacion_Actual.md'
+    - 'Phase III: Plan Elaboration': '08c_Fase_III_Elaboracion_Plan.md'
+    - 'Phase IV: Activity Programming': '08d_Fase_IV_Programacion_Actividades.md'
+  - '9. Value of Information and IS Investment':
+    - 'Overview': '09_Valor_Informacion_Inversion_SI.md'
+    - 'Costs of IS': '09a_Costos_SI.md'
+    - 'Benefits of IS': '09b_Beneficios_SI.md'
+    - 'Types of IS Investments': '09c_Tipos_Inversiones_SI.md'
+  - '10. IS Resource Management (IS Area)':
+    - 'Overview': '10_Management_Recursos_IS.md'
+    - 'Role of the IS Area': '10a_Rol_SI_Area.md'
+    - 'Location of the IS Area': '10b_Ubicacion_SI_Area.md'
+    - 'Organization of the IS Area': '10c_Organizacion_SI_Area.md'
+  - '11. IS Administration': '11_Administracion_SI.md'
+  - '12. Integration of IS and Business Strategy':
+    - 'Overview': '12_Integracion_SI_Estrategia_Empresarial.md'
+    - '12a. Context of IS/IT Strategy': '12a_Contexto_Estrategia_SI_TI.md'
+    - '12b. Key Inputs for Strategy': '12b_Inputs_Clave_Estrategia.md'
+    - '12c. Application Portfolio': '12c_Cartera_Aplicaciones.md'
+    - '12c. Strategy Formulation': '12c_Formulacion_Estrategia_SI_TI.md'
+    - '12d. Strategy Implementation': '12d_Implantacion_Estrategia_SI_TI.md'
+    - '12e. Strategy Monitoring & Control': '12e_Seguimiento_Control_Estrategia_SI_TI.md'
+  - '13. IS/IT Project Management': '13_Gestion_Proyectos_SI_TI.md'
+  - '14. Software and IS Quality': '14_Calidad_Software_SI.md'
+  - '15. IS/IT Outsourcing': '15_Outsourcing_SI_TI.md'
+  - '16. IS/IT Security': '16_Seguridad_SI_TI.md'
+  - '17. Legal and Ethical Aspects in IS/IT': '17_Aspectos_Legales_Eticos_SI_TI.md'
+  - '18. Future Trends in IS/IT': '18_Tendencias_Futuras_SI_TI.md'
+  - '19. Glossary of IS/IT Terms': '19_Glosario_Terminos_SI_TI.md'
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight
+  - attr_list
+  - md_in_html
+  - admonition
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  # - mermaid2 # If using mkdocs-mermaid2-plugin (ensure it's installed)
