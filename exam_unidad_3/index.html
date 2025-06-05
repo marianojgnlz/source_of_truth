@@ -3155,7 +3155,34 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Preguntas de Diagnóstico, Planificación y Optimización">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-multiple-opcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preguntas de Múltiple Opción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-verdadero-o-falso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preguntas de Verdadero o Falso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-respuesta-corta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preguntas de Respuesta Corta
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preguntas de Respuesta Corta">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3326,7 +3353,34 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Preguntas de Diagnóstico, Planificación y Optimización">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-multiple-opcion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preguntas de Múltiple Opción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-verdadero-o-falso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preguntas de Verdadero o Falso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-respuesta-corta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preguntas de Respuesta Corta
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preguntas de Respuesta Corta">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3431,6 +3485,35 @@ Para seleccionar un nuevo sistema de gestión de bases de datos, el equipo técn
 b) ¿Qué tipo de <strong>carga de prueba</strong> sería más representativa en este caso? ¿Un benchmark estándar, un <code>Kernel</code> extraído de la carga real, o una <code>traza para simulación</code>? Justifique su elección.
 c) ¿Qué riesgos corre la empresa si elige el "Sistema A" basándose únicamente en los resultados del benchmark no representativo?</p>
 <p>En este contexto, explique el proceso de "planificación de prestaciones". ¿Cómo utilizaría los conceptos de "caracterización de la carga" y la búsqueda del "punto de inflexión" o "saturación" para anticipar y resolver el problema ANTES de que los estudiantes se vean afectados? Describa los pasos concretos que seguiría.</p>
+<hr />
+<h3 id="preguntas-de-multiple-opcion">Preguntas de Múltiple Opción<a class="headerlink" href="#preguntas-de-multiple-opcion" title="Permanent link">&para;</a></h3>
+<p><strong>1. La métrica de prestación más importante para un sistema </strong>interactivo<strong> (ej. un procesador de texto) es:</strong>
+   - a) El tiempo de retorno (Turnaround time)
+   - b) El throughput
+   - c) El tiempo de respuesta (Response time)
+   - d) La utilización de la CPU</p>
+<p><strong>2. Reorganizar los datos en un disco para reducir el tiempo de acceso es un ejemplo de:</strong>
+   - a) Tuning físico
+   - b) Tuning lógico
+   - c) Planificación de capacidad
+   - d) Benchmarking</p>
+<p><strong>3. Una carga de prueba que consiste en un programa real extraído del entorno de producción, considerado representativo de la carga total, se conoce como:</strong>
+   - a) Benchmark estándar
+   - b) Kernel
+   - c) Traza para simulación
+   - d) Monitor de rendimiento</p>
+<hr />
+<h3 id="preguntas-de-verdadero-o-falso">Preguntas de Verdadero o Falso<a class="headerlink" href="#preguntas-de-verdadero-o-falso" title="Permanent link">&para;</a></h3>
+<p><strong>1. (V/F) El "throughput" de un sistema se define como el tiempo que tarda en completarse una única transacción.</strong>
+   - <em>Justificación:</em> Falso. Ese es el tiempo de retorno. El throughput es el número de trabajos o transacciones completadas por unidad de tiempo.</p>
+<p><strong>2. (V/F) El primer paso en cualquier proceso de tuning de prestaciones debe ser siempre la mejora del hardware (tuning físico).</strong>
+   - <em>Justificación:</em> Falso. La regla general es siempre intentar primero el tuning lógico, ya que suele ser más económico y puede resolver la causa raíz del problema.</p>
+<hr />
+<h3 id="preguntas-de-respuesta-corta">Preguntas de Respuesta Corta<a class="headerlink" href="#preguntas-de-respuesta-corta" title="Permanent link">&para;</a></h3>
+<p><strong>1. ¿Cuál es la diferencia fundamental entre un sistema </strong>Batch<strong> y un sistema </strong>Transaccional<strong>?</strong>
+    - <em>Respuesta esperada:</em> Un sistema Batch procesa grandes volúmenes de datos sin interacción del usuario y su métrica es el tiempo de retorno. Un sistema Transaccional procesa operaciones cortas y atómicas que modifican los datos (ej. una transferencia bancaria) y su métrica es el tiempo de respuesta y la integridad.</p>
+<p><strong>2. ¿Qué es el "punto de inflexión" o "saturación" de un sistema y por qué es crítico encontrarlo en la planificación de prestaciones?</strong>
+    - <em>Respuesta esperada:</em> Es el punto de carga a partir del cual el tiempo de respuesta del sistema crece de forma exponencial e indefinida. Es crítico encontrarlo para saber cuál es la capacidad máxima real del sistema y poder actuar antes de que los usuarios la superen y sufran un colapso del servicio.</p>
 <blockquote>
 <h4 id="respuesta-a-la-pregunta-1-el-colapso-del-black-friday"><strong>Respuesta a la Pregunta 1: El Colapso del "Black Friday"</strong><a class="headerlink" href="#respuesta-a-la-pregunta-1-el-colapso-del-black-friday" title="Permanent link">&para;</a></h4>
 <p>La propuesta de "comprar servidores más potentes" es una reacción instintiva y un error clásico en la gestión de prestaciones. Como indica la Unidad 3, antes de cualquier acción, es imperativo <strong>"caracterizar la carga"</strong>. Sin un diagnóstico preciso, comprar más hardware es como ponerle un motor más grande a un coche con las ruedas pinchadas: un gasto inútil que no soluciona el problema de fondo. Un servidor más potente no servirá de nada si el cuello de botella está en una consulta ineficiente de la base de datos, en un límite de conexiones de red o en un algoritmo mal diseñado en la aplicación.</p>
