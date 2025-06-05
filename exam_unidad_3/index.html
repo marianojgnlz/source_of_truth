@@ -3155,6 +3155,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Preguntas de Diagnóstico, Planificación y Optimización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-a-la-pregunta-1-el-colapso-del-black-friday" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta a la Pregunta 1: El Colapso del "Black Friday"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-a-la-pregunta-2-el-dilema-del-sistema-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta a la Pregunta 2: El Dilema del Sistema Batch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-a-la-pregunta-3-midiendo-lo-inmedible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta a la Pregunta 3: Midiendo lo Inmedible
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-a-la-pregunta-4-tuning-fisico-vs-tuning-logico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta a la Pregunta 4: Tuning Físico vs. Tuning Lógico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-a-la-pregunta-5-planificacion-de-prestaciones-para-el-crecimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta a la Pregunta 5: Planificación de Prestaciones para el Crecimiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3275,6 +3326,57 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Preguntas de Diagnóstico, Planificación y Optimización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-a-la-pregunta-1-el-colapso-del-black-friday" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta a la Pregunta 1: El Colapso del "Black Friday"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-a-la-pregunta-2-el-dilema-del-sistema-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta a la Pregunta 2: El Dilema del Sistema Batch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-a-la-pregunta-3-midiendo-lo-inmedible" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta a la Pregunta 3: Midiendo lo Inmedible
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-a-la-pregunta-4-tuning-fisico-vs-tuning-logico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta a la Pregunta 4: Tuning Físico vs. Tuning Lógico
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#respuesta-a-la-pregunta-5-planificacion-de-prestaciones-para-el-crecimiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Respuesta a la Pregunta 5: Planificación de Prestaciones para el Crecimiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3327,7 +3429,162 @@ c) ¿Cómo se relaciona el concepto de <code>Mantenibilidad</code> con la <code>
 Para seleccionar un nuevo sistema de gestión de bases de datos, el equipo técnico decide usar un <strong>benchmark</strong> estándar de la industria (un programa de prueba genérico como TPC-C). El benchmark arroja que el "Sistema A" es un 20% más rápido que el "Sistema B". Sin embargo, usted observa que la carga de trabajo real de la empresa consiste en un 90% de consultas de lectura complejas y un 10% de escrituras, mientras que el benchmark simula una carga de 50% lectura y 50% escritura.</p>
 <p>a) Explique el concepto de <strong>representatividad</strong> de un modelo de carga y argumente por qué los resultados de este benchmark podrían llevar a una decisión de compra incorrecta.
 b) ¿Qué tipo de <strong>carga de prueba</strong> sería más representativa en este caso? ¿Un benchmark estándar, un <code>Kernel</code> extraído de la carga real, o una <code>traza para simulación</code>? Justifique su elección.
-c) ¿Qué riesgos corre la empresa si elige el "Sistema A" basándose únicamente en los resultados del benchmark no representativo? </p>
+c) ¿Qué riesgos corre la empresa si elige el "Sistema A" basándose únicamente en los resultados del benchmark no representativo?</p>
+<p>En este contexto, explique el proceso de "planificación de prestaciones". ¿Cómo utilizaría los conceptos de "caracterización de la carga" y la búsqueda del "punto de inflexión" o "saturación" para anticipar y resolver el problema ANTES de que los estudiantes se vean afectados? Describa los pasos concretos que seguiría.</p>
+<blockquote>
+<h4 id="respuesta-a-la-pregunta-1-el-colapso-del-black-friday"><strong>Respuesta a la Pregunta 1: El Colapso del "Black Friday"</strong><a class="headerlink" href="#respuesta-a-la-pregunta-1-el-colapso-del-black-friday" title="Permanent link">&para;</a></h4>
+<p>La propuesta de "comprar servidores más potentes" es una reacción instintiva y un error clásico en la gestión de prestaciones. Como indica la Unidad 3, antes de cualquier acción, es imperativo <strong>"caracterizar la carga"</strong>. Sin un diagnóstico preciso, comprar más hardware es como ponerle un motor más grande a un coche con las ruedas pinchadas: un gasto inútil que no soluciona el problema de fondo. Un servidor más potente no servirá de nada si el cuello de botella está en una consulta ineficiente de la base de datos, en un límite de conexiones de red o en un algoritmo mal diseñado en la aplicación.</p>
+<p>Propongo el siguiente plan de diagnóstico en 3 pasos, basado en los conceptos de la unidad:</p>
+<p><strong>Paso 1: Caracterización de la Carga de Trabajo del "Black Friday"</strong>
+*   <strong>Acción:</strong> Necesitamos descomponer el término genérico "tráfico" en sus componentes medibles. Utilizando herramientas de monitoreo de aplicaciones (APM), mediremos durante un pico de carga simulado:
+    *   <strong>Volumen y tipo de transacciones:</strong> ¿Cuántas son búsquedas de productos (interactivas)?, ¿cuántas son "añadir al carrito" (interactivas)?, y ¿cuántas son "procesar pago" (transaccionales)?
+    *   <strong>Identificación de procesos Batch:</strong> ¿Hay procesos batch (ej. actualización de inventario desde proveedores, generación de informes) ejecutándose durante las horas pico y compitiendo por los mismos recursos?
+*   <strong>Justificación:</strong> Este paso nos dirá <em>qué</em> está golpeando al sistema. Quizás el problema no es el volumen de usuarios, sino que la transacción "procesar pago" es extremadamente ineficiente y consume todos los recursos, o un proceso batch está bloqueando la base de datos.</p>
+<p><strong>Paso 2: Medición y Análisis de Prestaciones (Identificación del Cuello de Botella)</strong>
+*   <strong>Acción:</strong> Una vez caracterizada la carga, mediremos el rendimiento del sistema bajo esa carga específica. Nos enfocaremos en:
+    *   <strong>Tiempo de respuesta por tipo de transacción:</strong> ¿El sistema se degrada para todas las acciones por igual o solo para una en particular?
+    *   <strong>Utilización de recursos:</strong> Medir CPU, RAM, y sobre todo, <strong>I/O (Entrada/Salida) de disco</strong> y <strong>esperas de red</strong> en todos los servidores implicados (web, aplicación y base de datos).
+    *   <strong>Longitud de las colas de espera:</strong> ¿Cuántas peticiones están esperando por la CPU? ¿Cuántas esperan por una respuesta de la base de datos?
+*   <strong>Justificación:</strong> Este análisis identificará el <strong>cuello de botella</strong>. Si el servidor web tiene una CPU al 20% pero la cola de espera de I/O en el servidor de base de datos está al 100%, sabemos que comprar un servidor web más potente es tirar el dinero. El problema reside en la base de datos.</p>
+<p><strong>Paso 3: Modelado, Tuning y Planificación de Capacidad</strong>
+*   <strong>Acción:</strong> Con el cuello de botella identificado, podemos actuar.
+    *   Si el problema es una consulta a la base de datos (un problema de <strong>tuning lógico</strong>), el equipo de desarrollo debe optimizarla.
+    *   Si el problema es un límite de conexiones en el servidor de aplicaciones (un problema de <strong>tuning lógico</strong> de configuración), se debe ajustar ese parámetro.
+    *   Solo si se demuestra que el cuello de botella es un recurso de hardware (ej. la CPU del servidor de base de datos está al 100% incluso después del tuning lógico), se procede a planificar una mejora de hardware (<strong>tuning físico</strong>).
+*   <strong>Justificación:</strong> Este enfoque, llamado <strong>Planificación de Prestaciones</strong>, asegura que cualquier inversión sea precisa y efectiva. Resuelve el problema real en lugar de ocultar los síntomas, garantizando que el sistema no solo sobreviva al próximo Black Friday, sino que lo haga de manera eficiente y escalable.</p>
+<hr />
+<h4 id="respuesta-a-la-pregunta-2-el-dilema-del-sistema-batch"><strong>Respuesta a la Pregunta 2: El Dilema del Sistema Batch</strong><a class="headerlink" href="#respuesta-a-la-pregunta-2-el-dilema-del-sistema-batch" title="Permanent link">&para;</a></h4>
+<p>La propuesta de la dirección es técnicamente inviable y demuestra una falta de comprensión de los distintos <strong>tipos de sistemas</strong> y sus requerimientos de prestaciones, tal como se describen en la Unidad 3.</p>
+<p><strong>a) Explicación del Conflicto:</strong></p>
+<p>Este es un conflicto fundamental entre un <strong>Sistema Interactivo (el CRM)</strong> y un <strong>Sistema Batch (el análisis de datos)</strong>.</p>
+<ul>
+<li>
+<p><strong>Sistema Interactivo (CRM):</strong> Su principal métrica de prestación es el <strong>tiempo de respuesta</strong>. Un usuario realiza una acción (buscar un cliente) y espera una respuesta casi instantánea (típicamente menos de 2 segundos). El sistema está diseñado para manejar muchas peticiones cortas y concurrentes, manteniendo una baja latencia para cada una.</p>
+</li>
+<li>
+<p><strong>Sistema Batch (Análisis):</strong> Su principal métrica de prestación es el <strong>tiempo de retorno</strong> o <em>throughput</em>. Su objetivo es procesar un volumen masivo de datos en el menor tiempo total posible. Para lograrlo, está diseñado para monopolizar todos los recursos del sistema (100% de la CPU, máximo I/O de disco) durante su ejecución.</p>
+</li>
+</ul>
+<p><strong>El Conflicto:</strong> Al ejecutar el proceso batch durante el horario laboral, este secuestrará todos los recursos del servidor. Cuando un vendedor intente usar el CRM, su petición interactiva, que necesita una respuesta rápida, quedará en una larga cola de espera detrás de la masiva tarea del proceso batch. El resultado será que el tiempo de respuesta del CRM pasará de segundos a minutos, o incluso nunca responderá (timeout). El sistema interactivo se volverá funcionalmente inútil.</p>
+<pre class="mermaid"><code>graph TD
+    subgraph Servidor Compartido
+        Recursos(CPU / RAM / I/O Disco)
+    end
+
+    Batch["Proceso Batch&lt;br&gt;Objetivo: Máximo Throughput"] --"Intenta Monopolizar&lt;br&gt;100% de Recursos"--&gt; Recursos;
+    CRM["Usuarios del CRM&lt;br&gt;Objetivo: Bajo Tiempo de Respuesta"] --"Peticiones Cortas"--&gt; Recursos;
+    Recursos --"Saturados por Batch"--&gt; Resultado(Tiempos de Respuesta del CRM &gt; 5 minutos);</code></pre>
+<p><strong>b) Propuestas de Solución:</strong></p>
+<ol>
+<li>
+<p><strong>Solución 1: Gestión de Carga y Priorización (Tuning Lógico):</strong> Esta es la solución clásica y más económica. Se basa en separar las cargas en el tiempo y por prioridad.</p>
+<ul>
+<li><strong>Programación en Horas Valle:</strong> El proceso batch, por su naturaleza no interactiva, debe ser programado para ejecutarse durante la noche (la "hora valle"), cuando no hay usuarios en el CRM.</li>
+<li><strong>Asignación de Prioridad:</strong> Adicionalmente, al proceso batch se le debe asignar una prioridad de sistema operativo muy baja ("nice" en sistemas Unix/Linux). Esto significa que si, por alguna razón excepcional, un usuario necesita acceder al CRM mientras el batch está corriendo, el sistema operativo dará prioridad absoluta a la petición interactiva del CRM, pausando momentáneamente el batch para garantizar el tiempo de respuesta.</li>
+</ul>
+</li>
+<li>
+<p><strong>Solución 2: Aislamiento de Recursos (Tuning Físico/Arquitectónico):</strong> Esta es la solución más robusta y estratégica a largo plazo.</p>
+<ul>
+<li><strong>Creación de un Data Warehouse:</strong> Se implementa un servidor de base de datos separado, optimizado para análisis (un Data Warehouse o Data Mart).</li>
+<li><strong>Proceso ETL Nocturno:</strong> Cada noche, un proceso automático de <strong>E</strong>xtracción, <strong>T</strong>ransformación y <strong>C</strong>arga (ETL) copia los datos del día desde la base de datos transaccional (la del CRM) a la base de datos analítica.</li>
+<li><strong>Ejecución Aislada:</strong> El pesado proceso batch de análisis se ejecuta contra este servidor separado. De esta forma, las cargas de trabajo están físicamente aisladas. El análisis de datos puede ejecutarse en cualquier momento, incluso durante el día, sin tener absolutamente ningún impacto en las prestaciones del sistema CRM en vivo.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h4 id="respuesta-a-la-pregunta-3-midiendo-lo-inmedible"><strong>Respuesta a la Pregunta 3: Midiendo lo Inmedible</strong><a class="headerlink" href="#respuesta-a-la-pregunta-3-midiendo-lo-inmedible" title="Permanent link">&para;</a></h4>
+<p>La queja "el sistema está lento" es un <strong>parámetro no medible</strong>. El trabajo del analista de prestaciones es traducirlo a un conjunto de <strong>parámetros medibles</strong> para poder diagnosticar y resolver el problema de forma objetiva. Este proceso, basado en la <strong>caracterización de la carga de trabajo</strong>, consta de tres fases:</p>
+<ol>
+<li>
+<p><strong>Fase 1: Descomposición de la Carga de Trabajo (Entrevistas con Usuarios):</strong></p>
+<ul>
+<li><strong>Acción:</strong> Realizar entrevistas con los usuarios que se quejan. El objetivo es descomponer la queja genérica en componentes específicos. Haremos preguntas como:<ul>
+<li>"¿Cuándo nota la lentitud? ¿Todo el día o a ciertas horas?"</li>
+<li>"¿Qué acción exacta está realizando cuando el sistema se vuelve lento? ¿Es al guardar un cliente, al buscar un producto, al generar un informe?"</li>
+</ul>
+</li>
+<li><strong>Resultado:</strong> Esta fase nos permite identificar los <strong>componentes de la carga de trabajo</strong> que causan el problema. Por ejemplo, podríamos descubrir que la "lentitud" solo ocurre al ejecutar la transacción "Generar Informe de Ventas Mensual".</li>
+</ul>
+</li>
+<li>
+<p><strong>Fase 2: Definición de Métricas y Objetivos de Nivel de Servicio (SLOs):</strong></p>
+<ul>
+<li><strong>Acción:</strong> Para cada componente identificado, definimos una métrica de prestación clave y un objetivo cuantificable (SLO).<ul>
+<li>Para la transacción "Generar Informe de Ventas Mensual" (un proceso batch), la métrica es el <strong>tiempo de retorno</strong>. El SLO podría ser: "El informe debe generarse en menos de 5 minutos".</li>
+<li>Si otro problema fuera "Búsqueda de Cliente" (una transacción interactiva), la métrica sería el <strong>tiempo de respuesta</strong>, y el SLO podría ser: "Los resultados de la búsqueda deben aparecer en menos de 2 segundos para el 95% de las peticiones".</li>
+</ul>
+</li>
+<li><strong>Resultado:</strong> Hemos transformado una queja subjetiva ("está lento") en una condición de fallo objetiva y medible ("el tiempo de retorno del informe es superior a 5 minutos").</li>
+</ul>
+</li>
+<li>
+<p><strong>Fase 3: Medición y Diagnóstico:</strong></p>
+<ul>
+<li><strong>Acción:</strong> Ahora que sabemos qué medir, utilizamos herramientas de monitoreo para obtener los datos. Ejecutamos la transacción "Generar Informe de Ventas Mensual" y medimos su tiempo de retorno real.</li>
+<li><strong>Resultado:</strong> Si el tiempo medido es de 30 minutos, hemos confirmado objetivamente que se está violando el SLO. El siguiente paso es analizar <em>por qué</em> (ver pregunta 1) y aplicar el tuning necesario, pero el primer paso crucial de medir lo "inmedible" ya está completado.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h4 id="respuesta-a-la-pregunta-4-tuning-fisico-vs-tuning-logico"><strong>Respuesta a la Pregunta 4: Tuning Físico vs. Tuning Lógico</strong><a class="headerlink" href="#respuesta-a-la-pregunta-4-tuning-fisico-vs-tuning-logico" title="Permanent link">&para;</a></h4>
+<p>Este escenario presenta la dicotomía fundamental en la mejora de prestaciones: <strong>Tuning Físico</strong> vs. <strong>Tuning Lógico</strong>.</p>
+<ul>
+<li>
+<p><strong>Tuning Físico (Propuesta del Equipo A):</strong> Consiste en modificar la configuración del hardware. Como se menciona en el texto, esto incluye "cambiar la CPU por una más rápida, añadir más memoria principal, cambiar los discos". Es, esencialmente, darle más fuerza bruta al sistema.</p>
+</li>
+<li>
+<p><strong>Tuning Lógico (Propuesta del Equipo B):</strong> Consiste en modificar la configuración del software o la aplicación para que utilice los recursos existentes de manera más eficiente. El texto lo describe como acciones que "no implican un cambio en el hardware", como "cambiar las prioridades de los trabajos, optimizar el código de una aplicación o reorganizar la información en los discos". Reescribir una consulta SQL ineficiente o añadir un índice a la base de datos son ejemplos perfectos de tuning lógico.</p>
+</li>
+</ul>
+<p><strong>Por qué el Tuning Lógico Debe Ser la Primera Opción:</strong></p>
+<p>La regla de oro en la gestión de prestaciones es <strong>siempre intentar primero el tuning lógico</strong>. Una única consulta SQL mal escrita puede ser tan ineficiente que es capaz de consumir todos los recursos de cualquier servidor, sin importar cuán potente sea.</p>
+<p><strong>Riesgo de Empezar con el Tuning Físico:</strong>
+Empezar añadiendo más RAM (tuning físico) es extremadamente arriesgado por dos razones:</p>
+<ol>
+<li>
+<p><strong>Enmascara el Problema Real:</strong> Añadir más memoria puede aliviar temporalmente el síntoma. La consulta ineficiente podría ejecutarse un poco más rápido porque puede cargar más datos en la RAM. Sin embargo, la causa raíz (el código ineficiente) sigue ahí. El equipo declarará una victoria prematura, pero el problema reaparecerá tan pronto como la carga de datos aumente un poco más, habiendo malgastado el presupuesto en hardware.</p>
+</li>
+<li>
+<p><strong>Es Económicamente Ineficiente:</strong> El costo de optimizar una consulta (horas de un desarrollador) es órdenes de magnitud menor que el costo de comprar, instalar y mantener nuevo hardware para el servidor. Un buen tuning lógico puede hacer que una consulta pase de ejecutarse en 10 minutos a 2 segundos en el hardware existente. Ninguna cantidad de RAM puede lograr ese nivel de mejora si el problema es lógico.</p>
+</li>
+</ol>
+<p>La secuencia correcta es siempre: <strong>1º) Identificar el cuello de botella. 2º) Aplicar tuning lógico. 3º) Si el problema persiste, considerar el tuning físico</strong> como último recurso.</p>
+<hr />
+<h4 id="respuesta-a-la-pregunta-5-planificacion-de-prestaciones-para-el-crecimiento"><strong>Respuesta a la Pregunta 5: Planificación de Prestaciones para el Crecimiento</strong><a class="headerlink" href="#respuesta-a-la-pregunta-5-planificacion-de-prestaciones-para-el-crecimiento" title="Permanent link">&para;</a></h4>
+<p>La "planificación de prestaciones" es el proceso proactivo para asegurar que un sistema pueda manejar una carga de trabajo futura. El objetivo es encontrar y solucionar los cuellos de botella antes de que los usuarios reales los sufran. Para el sistema de matriculación, seguiría estos pasos concretos:</p>
+<p><strong>Paso 1: Caracterización de la Carga de Trabajo Actual</strong>
+*   <strong>Acción:</strong> Antes de pensar en el futuro, debemos entender el presente. Utilizaríamos herramientas de monitoreo en el sistema de producción durante un período de matriculación para medir con precisión la carga actual:
+    *   Número de matriculaciones por hora en los picos.
+    *   Desglose de las transacciones (ej. 70% consultas de cursos, 20% simulaciones, 10% inscripciones efectivas).
+    *   Tiempos de respuesta actuales para cada tipo de transacción.
+    *   Utilización de recursos (CPU, RAM, I/O) del servidor bajo esta carga.</p>
+<p><strong>Paso 2: Modelado de la Carga de Trabajo Futura</strong>
+*   <strong>Acción:</strong> Creamos un modelo de la carga futura. No es tan simple como "un 30% más de todo". Podríamos modelar un incremento del 30% en las consultas y del 25% en las inscripciones efectivas, basándonos en patrones históricos. Este modelo se traduce en un script para una herramienta de pruebas de carga.</p>
+<p><strong>Paso 3: Pruebas de Estrés y Búsqueda del "Punto de Inflexión"</strong>
+*   <strong>Acción:</strong> En un entorno de pre-producción (una copia idéntica del sistema real), utilizamos la herramienta de pruebas de carga para simular el tráfico. Comenzamos con la carga actual y la vamos incrementando gradualmente (110%, 120%, 130%, etc.) mientras monitorizamos los tiempos de respuesta.
+*   <strong>Objetivo:</strong> Estamos buscando el <strong>"punto de inflexión" o "saturación"</strong>, que el texto describe como el punto a partir del cual el tiempo de respuesta "crece indefinidamente".</p>
+<pre class="mermaid"><code>graph TD
+    subgraph "Prueba de Estrés"
+        A(Carga Simulada) --&gt; B{Sistema};
+        B --&gt; C(Tiempo de Respuesta);
+    end
+    
+    subgraph "Gráfico de Prestaciones"
+        X1---X2;
+        Y1---Y2;
+        PuntoInflexion -- "Saturación" --&gt; Curva;
+        X1(Carga) --&gt; Curva(( ))
+        Y1(Tiempo Resp.) --&gt; Curva
+    end
+
+    Curva -- "Aquí el sistema colapsa" --&gt; PuntoInflexion(Punto de Inflexión);</code></pre>
+<p><strong>Paso 4: Análisis y Plan de Acción Proactivo</strong>
+*   <strong>Análisis:</strong> Analizamos los resultados de la prueba.
+    *   <strong>Escenario A:</strong> El sistema maneja la carga del 130% con tiempos de respuesta aceptables. El punto de inflexión está más allá de la carga esperada. <strong>Acción:</strong> No se necesita hacer nada, solo monitorizar durante la matriculación real.
+    *   <strong>Escenario B:</strong> El sistema alcanza su punto de inflexión al 115% de la carga actual. Sabemos con certeza que fallará con un 30% más de usuarios. <strong>Acción:</strong> Analizamos los datos de la prueba para identificar el cuello de botella que causó la saturación (ej. el pool de conexiones a la base de datos se agotó). Aplicamos la corrección (tuning lógico o físico) en el entorno de pre-producción y volvemos a ejecutar la prueba para validar que el punto de inflexión se ha desplazado más allá del 130%.</p>
+<p>Este proceso nos permite llegar al período de matriculación con la confianza de que el sistema ha sido validado para soportar la carga esperada, evitando una crisis en producción. </p>
+</blockquote>
 
 
 
