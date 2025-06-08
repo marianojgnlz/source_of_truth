@@ -3,3 +3,49 @@
   --md-primary-fg-color--light: #abcdef; /* A lighter variant */
   --md-primary-fg-color--dark:  #000000; /* A darker variant */
 }
+
+.mermaid svg {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  width: 100%;
+  height: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+#interactive-exam-wrapper {
+    font-family: 'Inter', sans-serif;
+    color: #334155;
+    padding: 2rem;
+    margin: -0.8rem -1.2rem;
+}
+
+#interactive-exam-wrapper .question-answer {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+#interactive-exam-wrapper .question-answer.visible {
+    display: block;
+    max-height: 1000px; /* Needs to be larger than any possible answer height */
+    transition: max-height 1s ease-in-out;
+}
+
+#interactive-exam-wrapper .nav-button.active {
+    background-color: #0891b2;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Styles for the interactive games page */
+body.interactive-games-page .md-sidebar--primary,
+body.interactive-games-page .md-sidebar--secondary {
+    display: none!important;
+}
+
+body.interactive-games-page .md-main .md-grid {
+    max-width: 100%!important;
+    margin-left: 0!important;
+}

@@ -17,11 +17,16 @@ theme:
         name: Switch to light mode
   # If you have features or palette, they would be here
 
+plugins:
+  - search
+  - mkdocs_quiz
+
 docs_dir: ../unidades # Points to your 'unidad_1' directory relative to this mkdocs.yml
 
 nav:
   - 'Unidad 1: Introducción':
     - 'Índice Unidad 1': 'unidad_1/00_indice_unidad_1.md'
+    - 'Mapa Mental Interactivo': 'unidad_1/mapa_mental_interactivo.md'
     - '1. Introducción a la Administración y Estrategia': 'unidad_1/01_Introduccion_Administracion_Estrategia.md'
     - '2. El Sistema de Información en la Empresa': 'unidad_1/02_Sistema_Informacion_Empresa.md'
     - '3. IS y la Cadena de Valor': 'unidad_1/03_SI_Cadena_Valor.md'
@@ -51,9 +56,9 @@ nav:
       - 'Contexto de la Estrategia IS/IT': 'unidad_1/12a_Contexto_Estrategia_SI_TI.md'
       - 'Entradas Clave para la Estrategia': 'unidad_1/12b_Inputs_Clave_Estrategia.md'
       - 'Cartera de Aplicaciones': 'unidad_1/12c_Cartera_Aplicaciones.md'
-      - 'Formulación de la Estrategia': 'unidad_1/12c_Formulacion_Estrategia_SI_TI.md'
-      - 'Implementación de la Estrategia': 'unidad_1/12d_Implantacion_Estrategia_SI_TI.md'
-      - 'Seguimiento y Control de la Estrategia': 'unidad_1/12e_Seguimiento_Control_Estrategia_SI_TI.md'
+      - 'Formulación de la Estrategia': 'unidad_1/12d_Estrategias_Genericas_Gestion_SI_TI.md'
+      - 'Implementación de la Estrategia': 'unidad_1/12e_Proyeccion_Estrategias_Cartera.md'
+      - 'Seguimiento y Control de la Estrategia': 'unidad_1/12f_Migracion_Prioridades_Cartera.md'
     - '13. Las Organizaciones según Chiavenato':
       - 'Resumen': 'unidad_1/13_Organizaciones_Chiavenato.md'
       - 'Sistemas Sociales y Abiertos': 'unidad_1/13a_Organizaciones_Sistemas_Sociales_Abiertos.md'
@@ -158,13 +163,6 @@ nav:
     - '12. Proceso de Control en RRHH': 'unidad_5/12_proceso_control.md'
     - '13. Criterios y Medios de Control': 'unidad_5/13_criterios_medios_control.md'
     - '14. Auditoría de RRHH': 'unidad_5/14_auditoria_rrhh.md'
-  - 'Exámenes':
-    - 'Unidad 1': 'exam_unidad_1.md'
-    - 'Unidad 2': 'exam_unidad_2.md'
-    - 'Unidad 3': 'exam_unidad_3.md'
-    - 'Unidad 4': 'exam_unidad_4.md'
-    - 'Unidad 5': 'exam_unidad_5.md'
-    - 'Unidad 6': 'exam_unidad_6.md'
   - 'Unidad 6: Control del ambiente informático':
     - 'Índice Unidad 6': 'unidad_6/00_indice_unidad_6.md'
     - '1. Introducción al Control del Ambiente Informático': 'unidad_6/01_control_ambiente_informatico_intro.md'
@@ -186,6 +184,15 @@ nav:
     - '11. Tipos de Auditoría': 'unidad_6/11_tipos_auditoria.md'
     - '12. Informes de Auditoría': 'unidad_6/12_informes_auditoria.md'
     - '13. Evidencia en la Auditoría': 'unidad_6/13_evidencia_auditoria.md'
+  - 'Exámenes':
+    - 'Unidad 1': 'interactive_exam_1.md'
+    - 'Unidad 2': 'interactive_exam_2.md'
+    - 'Unidad 3': 'interactive_exam_3.md'
+    - 'Unidad 4': 'interactive_exam_4.md'
+    - 'Unidad 5': 'interactive_exam_5.md'
+    - 'Unidad 6': 'interactive_exam_6.md'
+    - 'Juegos Interactivos': 'juegos_interactivos.md'
+    - 'Pasapalabra': 'pasapalabra.md'
 
 markdown_extensions:
   - pymdownx.superfences:
@@ -200,9 +207,9 @@ markdown_extensions:
   - toc:
       permalink: true
 
-plugins:
-  - search
-  # - mermaid2 # If using mkdocs-mermaid2-plugin (ensure it's installed)
-
 extra_css:
-  - stylesheets/extra.css # Adjust path if needed
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+  - https://cdn.tailwindcss.com
