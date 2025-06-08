@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego: Conexión de Conceptos de RRHH - Unidad 4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f9ff; /* sky-50 */
+        }
+        .term-card {
+            cursor: grab;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .term-card:active {
+            cursor: grabbing;
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            z-index: 10;
+        }
+        .drop-zone {
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            border-style: dashed;
+        }
+        .drop-zone.over {
+            background-color: #dbeafe; /* blue-100 */
+            border-color: #3b82f6; /* blue-500 */
+        }
+        .drop-zone.correct {
+            background-color: #dcfce7; /* green-100 */
+            border-color: #22c55e; /* green-500 */
+            border-style: solid;
+        }
+        .drop-zone.correct .term-placeholder {
+            display: none;
+        }
+        .drop-zone.incorrect {
+            background-color: #fee2e2; /* red-100 */
+            border-color: #ef4444; /* red-500 */
+        }
+        .term-card.matched {
+            opacity: 0.5;
+            cursor: default;
+            pointer-events: none;
+        }
+        #completion-modal {
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="container mx-auto max-w-6xl">
+        <!-- Encabezado del Juego -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-sky-800">Conexión de Conceptos de RRHH</h1>
+            <p class="text-lg md:text-xl text-slate-600 mt-2">Arrastra el término a su definición correcta. ¡Pon a prueba tus conocimientos de la Unidad 4!</p>
+        </header>
+
+        <!-- Contenedor principal del juego -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Columna de Términos -->
+            <div class="p-4 bg-white rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-center text-sky-700 mb-4 border-b-2 border-sky-200 pb-2">Términos Clave</h2>
+                <div id="terms-container" class="space-y-4">
+                    <!-- Los términos se cargarán aquí con JS -->
+                </div>
+            </div>
+
+            <!-- Columna de Definiciones -->
+            <div class="p-4 bg-white rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-center text-sky-700 mb-4 border-b-2 border-sky-200 pb-2">Definiciones</h2>
+                <div id="definitions-container" class="space-y-4">
+                    <!-- Las definiciones se cargarán aquí con JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles y puntuación -->
+        <div class="mt-8 text-center">
+            <p class="text-2xl font-bold text-slate-700">Aciertos: <span id="score" class="text-green-600">0</span> / <span id="total-terms"></span></p>
+            <button id="reset-button" class="mt-4 bg-sky-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-sky-700 transition-transform transform hover:scale-105 shadow-md">
+                Reiniciar Juego
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Modal de Finalización -->
+    <div id="completion-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden opacity-0">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl text-center transform transition-transform scale-95" id="modal-content">
+            <h2 class="text-4xl font-extrabold text-green-600 mb-4">¡Felicitaciones!</h2>
+            <p class="text-xl text-slate-700 mb-6">Has completado el desafío y demostrado tu dominio de los conceptos de la Unidad 4.</p>
+            <button id="play-again-button" class="bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-700 transition-transform transform hover:scale-105 shadow-lg">
+                Jugar de Nuevo
+            </button>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- DATOS DEL JUEGO ---
+        const gameData = [
+            { id: 1, term: 'Análisis Organizacional', definition: 'Examina objetivos futuros, cultura y planes estratégicos para definir necesidades de formación a nivel macro.' },
+            { id: 2, term: 'Ley del Efecto', definition: 'Principio que establece que un comportamiento tiende a mantenerse si es percibido como recompensador.' },
+            { id: 3, term: 'Desarrollo Organizacional (DO)', definition: 'Aborda a la organización como un sistema total para mejorar la efectividad y la salud a largo plazo.' },
+            { id: 4, term: 'Remuneración Variable', definition: 'Porción de la compensación que depende de los resultados logrados por la empresa, un área o un individuo.' },
+            { id: 5, term: 'Método de Jerarquización', definition: 'Ordena los cargos del más al menos importante en su conjunto, sin analizar sus componentes.' },
+            { id: 6, term: 'Equilibrio Externo (Salarios)', definition: 'Se logra comparando los salarios de la empresa con los del mercado laboral para ser competitivo.' },
+            { id: 7, term: 'Beneficio Voluntario', definition: 'Beneficio concedido por liberalidad de la empresa, no exigido por ley (ej. seguro médico privado).' },
+            { id: 8, term: 'Plan de Sucesión', definition: 'Herramienta para identificar y desarrollar talento interno para futuras posiciones de liderazgo.' },
+            { id: 9, term: 'Indicador a Posteriori', definition: 'Problema ya ocurrido que señala una carencia de entrenamiento (ej. alto número de accidentes).' },
+            { id: 10, term: 'Teoría de la Inequidad', definition: 'Sostiene que las personas comparan su ratio de recompensas/contribuciones con el de otros para juzgar la justicia.' }
+        ];
+
+        // --- REFERENCIAS AL DOM ---
+        const termsContainer = document.getElementById('terms-container');
+        const definitionsContainer = document.getElementById('definitions-container');
+        const scoreElement = document.getElementById('score');
+        const totalElement = document.getElementById('total-terms');
+        const resetButton = document.getElementById('reset-button');
+        const completionModal = document.getElementById('completion-modal');
+        const modalContent = document.getElementById('modal-content');
+        const playAgainButton = document.getElementById('play-again-button');
+
+        let score = 0;
+        let draggedItem = null;
+
+        // --- FUNCIONES DEL JUEGO ---
+
+        // Función para barajar un array (Algoritmo Fisher-Yates)
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Función para inicializar o reiniciar el juego
+        function initGame() {
+            score = 0;
+            scoreElement.textContent = score;
+            totalElement.textContent = gameData.length;
+            termsContainer.innerHTML = '';
+            definitionsContainer.innerHTML = '';
+
+            const shuffledTerms = shuffle([...gameData]);
+            const shuffledDefinitions = shuffle([...gameData]);
+
+            // Crear y añadir elementos de términos
+            shuffledTerms.forEach(item => {
+                const termDiv = document.createElement('div');
+                termDiv.id = `term-${item.id}`;
+                termDiv.draggable = true;
+                termDiv.className = 'term-card bg-sky-100 border-l-4 border-sky-500 text-sky-900 font-semibold p-4 rounded-lg shadow-sm';
+                termDiv.textContent = item.term;
+                termsContainer.appendChild(termDiv);
+            });
+
+            // Crear y añadir zonas de definiciones
+            shuffledDefinitions.forEach(item => {
+                const defDiv = document.createElement('div');
+                defDiv.dataset.id = item.id;
+                defDiv.className = 'drop-zone bg-slate-50 border-2 border-slate-300 p-4 rounded-lg min-h-[80px] flex items-center justify-center';
+                
+                const placeholder = document.createElement('p');
+                placeholder.className = 'term-placeholder text-slate-400 text-center';
+                // **CORRECCIÓN AQUÍ:** Se muestra la definición en lugar del placeholder genérico.
+                placeholder.textContent = item.definition;
+                
+                const definitionText = document.createElement('p');
+                definitionText.className = 'definition-text hidden font-medium text-slate-800 text-center';
+                definitionText.innerHTML = `<strong>${item.term}:</strong> ${item.definition}`;
+
+                defDiv.appendChild(placeholder);
+                defDiv.appendChild(definitionText);
+                definitionsContainer.appendChild(defDiv);
+            });
+            
+            addDragAndDropListeners();
+        }
+        
+        // --- LÓGICA DE DRAG & DROP ---
+
+        function addDragAndDropListeners() {
+            const terms = document.querySelectorAll('.term-card');
+            const dropZones = document.querySelectorAll('.drop-zone');
+
+            terms.forEach(term => {
+                term.addEventListener('dragstart', (e) => {
+                    draggedItem = e.target;
+                    setTimeout(() => e.target.style.display = 'none', 0);
+                });
+
+                term.addEventListener('dragend', (e) => {
+                    setTimeout(() => {
+                        draggedItem.style.display = 'block';
+                        draggedItem = null;
+                    }, 0);
+                });
+            });
+
+            dropZones.forEach(zone => {
+                zone.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    if (!zone.classList.contains('correct')) {
+                        zone.classList.add('over');
+                    }
+                });
+
+                zone.addEventListener('dragleave', (e) => {
+                    zone.classList.remove('over');
+                });
+
+                zone.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    zone.classList.remove('over');
+                    if (zone.classList.contains('correct')) return;
+
+                    const draggedId = draggedItem.id.split('-')[1];
+                    const zoneId = zone.dataset.id;
+
+                    if (draggedId === zoneId) {
+                        // Acierto
+                        zone.classList.add('correct');
+                        draggedItem.classList.add('matched');
+                        draggedItem.draggable = false;
+                        
+                        // **CORRECCIÓN AQUÍ:** Muestra el texto de la definición formateado y oculta el placeholder
+                        zone.querySelector('.term-placeholder').style.display = 'none';
+                        const definitionText = zone.querySelector('.definition-text');
+                        definitionText.classList.remove('hidden');
+
+                        score++;
+                        scoreElement.textContent = score;
+
+                        if (score === gameData.length) {
+                           showCompletionModal();
+                        }
+                    } else {
+                        // Error
+                        zone.classList.add('incorrect');
+                        setTimeout(() => zone.classList.remove('incorrect'), 500);
+                    }
+                });
+            });
+        }
+        
+        // --- MODAL DE FINALIZACIÓN ---
+        function showCompletionModal() {
+            completionModal.classList.remove('hidden');
+            setTimeout(() => {
+                completionModal.style.opacity = '1';
+                modalContent.style.transform = 'scale(1)';
+            }, 50);
+        }
+
+        function hideCompletionModal() {
+            completionModal.style.opacity = '0';
+            modalContent.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                 completionModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // --- EVENT LISTENERS ---
+        resetButton.addEventListener('click', initGame);
+        playAgainButton.addEventListener('click', () => {
+            hideCompletionModal();
+            initGame();
+        });
+        
+        // --- INICIAR JUEGO ---
+        initGame();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Evaluación de los procesos de aplicación de las personas
+
+| ![][image60] |  |
+| ----- | ----- |
+| Lado izquierdo **Modelo mecánico** **y determinista:** a cada causa corresponde un solo efecto. **Énfasis en la eficiencia:** exigir que las personas ejecuten sus actividades de acuerdo con el método de trabajo, procedimientos y rutinas establecidos por la organización. **Factores higiénicos:** se otorga mucha importancia a los salarios que se pagan, a los beneficios ofrecidos, al tipo de supervisión aplicado a las personas, a la política interna de la organización. **Permanente y definitivo:** permanencia de las actividades (no cambian). | Lado derecho Los procesos de aplicación se caracterizan por el **modelo orgánico,** el énfasis en la eficacia, la focalización en los factores motivacionales y la innovación y la creatividad, pues se considera que los cargos y las actividades organizacionales no son inmutables y están sujetos a mejoramiento continuo**.** | 

@@ -977,8 +977,10 @@ La entrevista de retiro abarca el motivo de retiro y opiniones acerca de los sig
 #### ***Determinación del costo de la rotación de personal***
 
 ![][image42]  
-**Costos primarios de la rotación de personal.** Se relacionan directamente con el retiro de cada empleado y su reemplazo por otro. Incluye:  
+**Costos primarios de la rotación de personal.** Se relacionan directamente con el retiro de cada empleado y su reemplazo por otro. Incluye:
+
 **Gastos secundarios de la rotación de personal.** Abarcan aspectos intangibles difíciles de evaluar en forma numérica porque sus características son cualitativas en su mayor parte  
+
 **Costos terciarios de la rotación de personal.** Se relacionan con los efectos colaterales mediatos de la rotación, que se manifiestan a mediano y a largo plazos. En tanto los costos primarios son cuantificables y los costos secundarios son cualitativos, los costos terciarios son solo estimables. Entre dichos costos se cuentan:
 
 1. **Costo de inversión extra**: Aumento proporcional de las tasas de seguros, depreciación de equipo, mantenimiento y reparaciones con respecto al volumen de producción. Aumento del volumen de salarios pagados a los nuevos empleados y, por tanto, incremento de reajustes a los demás empleados cuando la situación del mercado laboral es de oferta, lo que intensifica la competencia y la oferta de salarios iníciales más elevados en el mercado de recursos humanos.  
